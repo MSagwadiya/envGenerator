@@ -9,6 +9,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Create .env file
         id: CreateEnvFile
-        uses: ./
+        uses: MSagwadiya/envGenerator@v1
         with:
           file_path: .env

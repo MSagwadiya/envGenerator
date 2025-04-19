@@ -10,22 +10,5 @@ inputs:
     required: true
     default: '.env'
 runs:
-  using: 'composite' # Run the action as a composite action
-  steps:
-   - name: Install Python
-     uses: actions/setup-python@v5
-     with:
-        python-version: '3.12'
-   - name: Install Dependencies
-     run: pip install -r requirements.txt
-     shell: bash
-   - name: Create .env file
-     id: CreateEnvFile
-     run: |
-       python main.py ${{ inputs.file_path }}
-     shell: bash
-   - name: Print .env file
-     run: |
-       echo "Contents of the .env file:"
-       cat ${{ inputs.file_path }}
-     shell: bash
+  using: "docker"
+  image: "Dockerfile"
