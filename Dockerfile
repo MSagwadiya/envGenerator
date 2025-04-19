@@ -1,4 +1,4 @@
-FROM python3.12-slim as base-env
+FROM python:3.12-slim as base-env
 ADD . /app
 WORKDIR /app
 
