@@ -1,0 +1,14 @@
+name: Test Action
+on: push
+
+jobs:
+  create_env_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Create .env file
+        id: CreateEnvFile
+        uses: ./
+        with:
+          file_path: .env
