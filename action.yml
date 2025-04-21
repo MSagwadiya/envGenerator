@@ -1,4 +1,4 @@
-name: 'Create .env file'
+name: 'Create .env file with Github'
 description: 'Github Action to create a .env file with Github Secrets'
 author: 'Manav Sagwadiya'
 branding:
