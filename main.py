@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 
 output_file = os.environ.get("file_path")
