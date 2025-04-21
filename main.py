@@ -2,19 +2,14 @@
 
 import os
 
-output_file = os.environ.get("file_path")
-env_vars = os.environ
+output_file = os.getenv("INPUT_FILE_PATH")
 
 def main():
     if not output_file:
       print("Error: Environment variable 'file_path' is not set.")
       return
     else:
-      with open(output_file, "w") as f:
-        for key, value in env_vars.items():
-            f.write(f"{key}={value}\n")
-
-    print(f"Environment variables written to {output_file}")
+      print(f"Environment variables written to {output_file}")
 
 
 if __name__ == "__main__":
