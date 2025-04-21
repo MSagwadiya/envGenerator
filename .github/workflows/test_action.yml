@@ -12,3 +12,5 @@ jobs:
         uses: MSagwadiya/envGenerator@v1
         with:
           file_path: .env
+      - name: Print .env file
+        run: cat .env
